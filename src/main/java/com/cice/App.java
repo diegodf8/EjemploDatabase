@@ -19,11 +19,15 @@ public class App
             // Sentencia para atacar a la base de datos
             Statement statement = connection.createStatement();
 
-            // Especificar la peticion
-            String sql ="CREATE TABLE prueba (id INT NOT NULL AUTO_INCREMENT, nombre VARCHAR(30) NOT NULL, PRIMARY KEY (id))";
+            // Especificar la peticion CREATE TABLE
+            //String sql ="CREATE TABLE prueba (id INT NOT NULL AUTO_INCREMENT, nombre VARCHAR(30) NOT NULL, PRIMARY KEY (id))";
 
+            // INSERT
+            String sql ="INSERT INTO prueba (id, nombre) VALUES(2,'Test')";
             // Ejecutar la peticion contra la bbdd
             statement.executeUpdate(sql);
+
+
 
             // Cerrar recursos
             connection.close();
