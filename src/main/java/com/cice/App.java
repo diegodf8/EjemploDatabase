@@ -32,15 +32,11 @@ public class App
             //DELETE
             String sql ="DELETE FROM prueba where id=2";
 
-            // Ejecutar la peticion contra la bbdd
+            // Ejecutar la peticion (executeUpdate) contra la bbdd  para INSERT, CREATE, DELETE & UPDATE
             statement.executeUpdate(sql);
-
-
 
             // Cerrar recursos
             connection.close();
-
-
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
